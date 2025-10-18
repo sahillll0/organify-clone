@@ -259,9 +259,16 @@
         padding: 8vh 5vw;
     }
 
+    .page2{
+        margin-bottom: 50vh;
+    }
+
+    .page3{
+    }
+
     .page3-card1, .page3-card2, .page3-card3 {
         width: 90%;
-        margin-top: 30vh;
+        margin-top: 10vh;
     }
 
     .page4-top {
@@ -334,6 +341,13 @@
         height: auto;
         padding-bottom: 50px;
     }
+
+    .image-overlay-container img {
+    position: relative; /* Essential for positioning the overlay */
+    width: 50vh; /* Maintain the width */
+    height: 30vh; /* Ensure the container has a fixed height */
+    overflow: hidden; /* Hide anything that goes outside, like scaled images */
+}
 
     .page8 {
         height: auto;
