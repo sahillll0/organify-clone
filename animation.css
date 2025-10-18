@@ -1,82 +1,94 @@
 .loader-backdrop {
-            position: fixed; /* Fixed position to cover the entire viewport */
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center; /* Center horizontally */
-            align-items: center; /* Center vertically */
-            background-color: white;
-            z-index: 9999; /* Ensure it stays on top of all other content */
-        }
+    position: fixed;
+    /* Fixed position to cover the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    background-color: white;
+    z-index: 9999;
+    /* Ensure it stays on top of all other content */
+}
 
-        /* --- Bouncing Dots Container --- */
-        .bouncing-dots {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+/* --- Bouncing Dots Container --- */
+.bouncing-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-        /* --- Individual Dot Styling --- */
-        .dot {
-            width: 15px; /* Base size */
-            height: 15px;
-            background-color: #00853A; /* Use the primary green color from previous files */
-            border-radius: 50%;
-            margin: 0 5px;
-            animation: bounce 1.0s infinite ease-in-out;
-        }
+/* --- Individual Dot Styling --- */
+.dot {
+    width: 15px;
+    /* Base size */
+    height: 15px;
+    background-color: #00853A;
+    /* Use the primary green color from previous files */
+    border-radius: 50%;
+    margin: 0 5px;
+    animation: bounce 1.0s infinite ease-in-out;
+}
 
-        /* Adjust the animation delay for a staggered effect */
-        .dot:nth-child(1) {
-            animation-delay: -0.32s;
-        }
+/* Adjust the animation delay for a staggered effect */
+.dot:nth-child(1) {
+    animation-delay: -0.32s;
+}
 
-        .dot:nth-child(2) {
-            animation-delay: -0.16s;
-        }
+.dot:nth-child(2) {
+    animation-delay: -0.16s;
+}
 
-        /* Add a third dot for smoother animation, though the image only shows two clearly */
-        .dot:nth-child(3) {
-            animation-delay: 0s;
-        }
+/* Add a third dot for smoother animation, though the image only shows two clearly */
+.dot:nth-child(3) {
+    animation-delay: 0s;
+}
 
-        /* --- Keyframes for the Bouncing Animation --- */
-        @keyframes bounce {
-            0%, 80%, 100% {
-                transform: scale(0); /* Start and end small/invisible */
-            }
-            40% {
-                transform: scale(1.0); /* Peak size/visibility */
-            }
-        }
+/* --- Keyframes for the Bouncing Animation --- */
+@keyframes bounce {
 
-        /*
+    0%,
+    80%,
+    100% {
+        transform: scale(0);
+        /* Start and end small/invisible */
+    }
+
+    40% {
+        transform: scale(1.0);
+        /* Peak size/visibility */
+    }
+}
+
+/*
          * Responsiveness: Adjust size for different devices using media queries
          */
-        @media (max-width: 600px) {
-            .dot {
-                width: 10px;
-                height: 10px;
-                margin: 0 3px;
-            }
-        }
+@media (max-width: 600px) {
+    .dot {
+        width: 10px;
+        height: 10px;
+        margin: 0 3px;
+    }
+}
 
-        @media (min-width: 1200px) {
-            .dot {
-                width: 20px;
-                height: 20px;
-                margin: 0 8px;
-            }
-        }
+@media (min-width: 1200px) {
+    .dot {
+        width: 20px;
+        height: 20px;
+        margin: 0 8px;
+    }
+}
 
-        /*
+/*
          * JavaScript to hide the loader after content loads (simulated)
          */
-        .hidden {
-            display: none !important;
-        }
+.hidden {
+    display: none !important;
+}
 
 
 @keyframes slideFromRight {
@@ -84,6 +96,7 @@
         opacity: 0;
         transform: translateX(100px);
     }
+
     100% {
         opacity: 1;
         transform: translateX(0);
@@ -97,6 +110,7 @@
         opacity: 1;
         transform: translateX(0);
     }
+
     to {
         opacity: 0;
         transform: translateX(20px);
@@ -104,12 +118,13 @@
 }
 
 @keyframes zoomBg {
-  0% {
-    background-size: 100%;
-  }
-  100% {
-    background-size: 115%;
-  }
+    0% {
+        background-size: 100%;
+    }
+
+    100% {
+        background-size: 115%;
+    }
 }
 
 @keyframes text-fade-in-up {
@@ -117,6 +132,7 @@
         opacity: 0;
         transform: translateY(40px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -124,7 +140,8 @@
 }
 
 .animate-on-scroll {
-    opacity: 0; /* Start hidden */
+    opacity: 0;
+    /* Start hidden */
 }
 
 .animate-on-scroll.in-view {
@@ -134,9 +151,11 @@
 
 @media (max-width: 768px) {
     .cards-container {
-        grid-template-columns: 1fr; /* One column on small screens */
+        grid-template-columns: 1fr;
+        /* One column on small screens */
     }
 }
+
 
 
 /* ==========================================================================
@@ -152,6 +171,7 @@
 
     .box {
         padding: 15px;
+        width: auto;
     }
 
     .page3 {
@@ -161,7 +181,9 @@
         padding: 50px 20px;
     }
 
-    .page3-card1, .page3-card2, .page3-card3 {
+    .page3-card1,
+    .page3-card2,
+    .page3-card3 {
         width: 80%;
         height: 60vh;
     }
@@ -178,7 +200,8 @@
 /* --- Tablet (Small) --- */
 @media screen and (max-width: 992px) {
     .nav-links {
-        display: none; /* Hide links, show hamburger menu */
+        display: none;
+        /* Hide links, show hamburger menu */
     }
 
     .nav {
@@ -194,6 +217,7 @@
         gap: 40px;
         align-items: center;
     }
+
     .post-card {
         max-width: 80%;
     }
@@ -201,7 +225,9 @@
 
 /* --- Mobile (Large) --- */
 @media screen and (max-width: 768px) {
-    .search, .account span {
+
+    .search,
+    .account span {
         display: none;
     }
 
@@ -209,7 +235,7 @@
         background-image: none;
         margin-top: 12vh;
     }
-    
+
 
     .page1::after {
         display: none;
@@ -238,13 +264,27 @@
     .page-2-box {
         flex-direction: column;
         align-items: center;
-        margin: 2vh 4vh;
+        padding: 2vh 4vh;
+        width: 80vw;
     }
 
-    .box1, .box2, .box3, .box4 {
-        width: 85vw;
+    .box {
+        width: 80vw;
         height: auto;
-        min-height: 20vh;
+        padding: 2vh 2vw;
+        gap: 2vh;
+        padding-bottom: 5vh;
+
+    }
+
+    .box1,
+    .box2,
+    .box3,
+    .box4 {
+        
+        width: 50vh;
+        max-width: 60vw;
+        border-radius: 1rem;
     }
 
     .page2-text {
@@ -259,14 +299,15 @@
         padding: 8vh 5vw;
     }
 
-    .page2{
+    .page2 {
         margin-bottom: 50vh;
     }
 
-    .page3{
-    }
+    .page3 {}
 
-    .page3-card1, .page3-card2, .page3-card3 {
+    .page3-card1,
+    .page3-card2,
+    .page3-card3 {
         width: 90%;
         margin-top: 10vh;
     }
@@ -288,14 +329,17 @@
     .organic-text {
         font-size: 3rem;
     }
-    
-    .page3{
-       padding-bottom: 20vh;
+
+    .page3 {
+        padding-bottom: 20vh;
     }
 
-     .page3-card1, .page3-card2, .page3-card3 {
+    .page3-card1,
+    .page3-card2,
+    .page3-card3 {
         width: 80%;
-        flex-shrink: 0; /* Prevent cards from shrinking */
+        flex-shrink: 0;
+        /* Prevent cards from shrinking */
     }
 
     .filter-buttons {
@@ -308,7 +352,7 @@
         padding: 0 20px;
     }
 
-    
+
 
     .card-info {
         flex-direction: column;
@@ -318,7 +362,8 @@
     }
 
     .card-info .left img {
-        max-width: 80px; /* Resize image inside the card */
+        max-width: 80px;
+        /* Resize image inside the card */
     }
 
     .card-info .right h2 {
@@ -343,11 +388,20 @@
     }
 
     .image-overlay-container img {
-    position: relative; /* Essential for positioning the overlay */
-    width: 50vh; /* Maintain the width */
-    height: 30vh; /* Ensure the container has a fixed height */
-    overflow: hidden; /* Hide anything that goes outside, like scaled images */
-}
+        position: relative;
+        /* Essential for positioning the overlay */
+        width: 50vh;
+        /* Maintain the width */
+        height: 30vh;
+        /* Ensure the container has a fixed height */
+        overflow: hidden;
+        /* Hide anything that goes outside, like scaled images */
+    }
+
+    .overlay{
+        width: 50vh;
+        height: 32vh;
+    }
 
     .page8 {
         height: auto;
@@ -365,7 +419,8 @@
     }
 
     .image-overlay-container {
-        width: 50%; /* Two images per row */
+        width: 50%;
+        /* Two images per row */
         height: 50vw;
     }
 
@@ -399,10 +454,11 @@
         padding: 0 20px;
     }
 
-    .card-info{
+    .card-info {
         width: auto;
-        
+
     }
+
     /* Horizontal scrollable container */
     .page5-center {
         gap: 15px;
@@ -440,7 +496,7 @@
         height: auto;
         flex-shrink: 0;
         flex-direction: column;
-        
+
         padding: 20px 20px;
         gap: 15px;
         scroll-snap-align: start;
@@ -526,7 +582,8 @@
     }
 
     .price-tag {
-        display: none; /* Hiding for very small screens to avoid clutter */
+        display: none;
+        /* Hiding for very small screens to avoid clutter */
     }
 
     .slider-buttons {
@@ -591,7 +648,8 @@
     }
 
     .image-overlay-container {
-        width: 100%; /* One image per row */
+        width: 100%;
+        /* One image per row */
         height: 100vw;
     }
 
@@ -604,7 +662,8 @@
     }
 
     .newsletter-input {
-        padding: 15px; /* Add padding for better text entry on mobile */
+        padding: 15px;
+        /* Add padding for better text entry on mobile */
     }
 }
 
@@ -614,6 +673,7 @@
         transform: translateY(-20px);
         opacity: 0;
     }
+
     100% {
         transform: translateY(0);
         opacity: 1;
